@@ -14,7 +14,6 @@
 		E11D12B51D2902B400051CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11D12B41D2902B400051CCF /* Assets.xcassets */; };
 		E11D12B81D2902B400051CCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E11D12B61D2902B400051CCF /* LaunchScreen.storyboard */; };
 		E11D12BE1D2902F800051CCF /* DynamicLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11D12BD1D2902F800051CCF /* DynamicLoader.swift */; };
-		E11D12C71D29104600051CCF /* DynamicFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = E11D12C61D29104600051CCF /* DynamicFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E11D12D11D29105700051CCF /* DynamicLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11D129C1D29029B00051CCF /* DynamicLoader.framework */; };
 		E11D12D31D29107C00051CCF /* DynamicClassExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11D12D21D29107C00051CCF /* DynamicClassExample.swift */; };
 		E11D12D41D2911F600051CCF /* DynamicLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11D129C1D29029B00051CCF /* DynamicLoader.framework */; };
@@ -160,7 +159,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E11D12A01D29029B00051CCF /* DynamicLoader.h in Headers */,
-				E11D12C71D29104600051CCF /* DynamicFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

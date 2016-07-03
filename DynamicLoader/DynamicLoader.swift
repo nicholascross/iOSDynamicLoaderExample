@@ -33,7 +33,7 @@ public class DynamicClassLoader {
             return nil
         }
         
-        let aClass = loadable.loadDynamic()
+        let _ = loadable.loadDynamic()
         
         return loadable
     }
@@ -42,4 +42,5 @@ public class DynamicClassLoader {
 
 public protocol DynamicLoadableClass {
     static func loadDynamic()
+    static func doSomethingElse() -> String
 }

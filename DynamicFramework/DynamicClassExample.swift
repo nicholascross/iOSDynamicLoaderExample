@@ -15,4 +15,8 @@ public class DynamicClassExample : DynamicLoadableClass {
         print("loaded dynamic class")
     }
     
+    public static func doSomethingElse() -> String {
+        return "Hello, World!"
+    }
+    
 }
