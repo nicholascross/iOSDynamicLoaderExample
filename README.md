@@ -12,7 +12,9 @@ Classes are loaded by name using the framework name.
 let bundleURL = NSBundle.URLForResource(framework, withExtension: "framework", subdirectory: "Frameworks", inBundleWithURL: NSBundle.mainBundle().bundleURL), let bundle = NSBundle(URL: bundleURL)
 ```
 The framework is loaded before the class is retrieved by name.
-`bundle.load()`
+```
+bundle.load()
+```
 
 Swift class names should include the module name.
 ```
