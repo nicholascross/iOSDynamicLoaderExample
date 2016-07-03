@@ -200,6 +200,7 @@
 				E11D12A81D2902B400051CCF /* Frameworks */,
 				E11D12A91D2902B400051CCF /* Resources */,
 				E11D12D81D2911F600051CCF /* Embed Frameworks */,
+				E112BFD61D291DAC0065E17C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -297,6 +298,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E112BFD61D291DAC0065E17C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" == \"Release\" ]; then\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/Frameworks/DynamicFramework.framework\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E11D12971D29029B00051CCF /* Sources */ = {
