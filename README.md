@@ -30,4 +30,4 @@ The app uses the interfaces provided by the `DynamicLoader.framework` and nothin
  
  return aConformingClass
 ```
-There is an additional build phase for the app that will conditionally remove dynamic framework depending on the scheme being run.  This is often helpful for inlcuding additional code during development or testing but leaving it out of the a release.
+There is an additional build phase for the app that will conditionally remove dynamic framework `DynamicFramework.framework` depending on the scheme being run.  This is often helpful for inlcuding additional code during development or testing but leaving it out of the a release.
