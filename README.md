@@ -22,4 +22,12 @@ Swift class names should include the module name.
 ```
 
 ## DynamicLoaderExampleApp.app
-The app uses the interfaces provided by the `DynamicLoader.framework` and nothing from `DynamicFramework.framework` directly.  There is an additional build phase for the app that will conditionally remove dynamic framework depending on the scheme being run.  This is often helpful for inlcuding additional code during development or testing but leaving it out of the a release.
+The app uses the interfaces provided by the `DynamicLoader.framework` and nothing from `DynamicFramework.framework` directly.
+```
+ guard let aConformingClass = aClass as? AnInterfaceAvailableToApp.Type else {
+    return nil
+ }
+ 
+ return aConformingClass
+```
+There is an additional build phase for the app that will conditionally remove dynamic framework depending on the scheme being run.  This is often helpful for inlcuding additional code during development or testing but leaving it out of the a release.
