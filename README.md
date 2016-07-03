@@ -16,7 +16,7 @@ The framework is loaded before the class is retrieved by name.
 
 Swift class names should include the module name.
 ```
- let aClass = DynamicClassLoader.loadDynamic("DynamicFramework.DynamicClassExample", fromFrameworkNamed: "DynamicFramework")
+ let aClass = NSClassFromString("DynamicFramework.DynamicClassExample")
 ```
 
 ## DynamicLoaderExampleApp.app
