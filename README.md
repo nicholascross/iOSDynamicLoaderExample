@@ -10,10 +10,11 @@ This is the framework that is conditionally included in the app.  The framework 
 Classes are loaded by name using the framework name.
 ```
 let bundleURL = NSBundle.URLForResource(framework, withExtension: "framework", subdirectory: "Frameworks", inBundleWithURL: NSBundle.mainBundle().bundleURL)
-let bundle = NSBundle(URL: bundleURL)
 ```
+
 The framework is loaded before the class is retrieved by name.
 ```
+let bundle = NSBundle(URL: bundleURL)
 bundle.load()
 ```
 
