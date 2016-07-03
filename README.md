@@ -5,11 +5,11 @@ Example project showing embedded framework with conditional dynamic class loadin
 The interface to any dynamically loaded classes are defined in a seperate framework that is always available to the app.  It is both "embedded" and "linked" with the app `DynamicLoaderExampleApp.app`.
 
 ## DynamicFramework.framework
-This is the framework that is conditionally included in the app.  The framework is always "embedded" but not "linked" with the app. It is "linked" with the framework that defines its interface `DynamicLoader.framework`.
+This is the framework that is conditionally included in the app.  The framework is always "embedded" but **not "linked"** with the app. It is "linked" with the framework that defines its interface `DynamicLoader.framework`.
 
 Classes are loaded by name using the framework name.
 ```
-let bundleURL = NSBundle.URLForResource(framework, withExtension: "framework", subdirectory: "Frameworks", inBundleWithURL: NSBundle.mainBundle().bundleURL)
+let bundleURL = NSBundle.URLForResource("DynamicFramework", withExtension: "framework", subdirectory: "Frameworks", inBundleWithURL: NSBundle.mainBundle().bundleURL)
 ```
 
 The framework is loaded before the class is retrieved by name.
