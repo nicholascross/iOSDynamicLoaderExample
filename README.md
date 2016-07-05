@@ -14,6 +14,22 @@ public protocol AnInterfaceAvailableToApp {
 ## DynamicFramework.framework
 This is the framework that is conditionally included in the app.  The framework is always *embedded* but **not** *linked* with the app `DynamicLoaderExampleApp.app`. It is *"linked"* with the framework that defines its interface `DynamicLoader.framework`.
 
+Any class that we want to dynamically load must implement an interface that the app is aware of.
+
+```swift
+public class DynamicClassExample : AnInterfaceAvailableToApp {
+    
+    public static func doSomething() {
+        print("loaded dynamic class")
+    }
+    
+    public static func doSomethingElse() -> String {
+        return "Hello, World!"
+    }
+    
+}
+```
+
 Classes are loaded by name using the framework name.
 ```swift
 let bundleURL = NSBundle.URLForResource("DynamicFramework", withExtension: "framework", subdirectory: "Frameworks", inBundleWithURL: NSBundle.mainBundle().bundleURL)
