@@ -30,13 +30,9 @@ public class DynamicClassExample : AnInterfaceAvailableToApp {
 }
 ```
 
-Classes are loaded by name using the framework name.
-```swift
-let bundleURL = NSBundle.URLForResource("DynamicFramework", withExtension: "framework", subdirectory: "Frameworks", inBundleWithURL: NSBundle.mainBundle().bundleURL)
-```
-
 The framework is loaded before the class is retrieved by name.
 ```swift
+let bundleURL = NSBundle.URLForResource("DynamicFramework", withExtension: "framework", subdirectory: "Frameworks", inBundleWithURL: NSBundle.mainBundle().bundleURL)
 let bundle = NSBundle(URL: bundleURL)
 bundle.load()
 ```
