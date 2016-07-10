@@ -46,11 +46,11 @@ Swift class names should include the module name.
 The app uses the interfaces provided by the `DynamicLoader.framework` and nothing from `DynamicFramework.framework` directly.
 ```swift
  guard let aConformingClass = aClass as? AnInterfaceAvailableToApp.Type else {
-    //if the class was not loaded return nil
-    return nil
+    //the class was not loaded
+    return
  }
  
- //if the class was loaded then we can do something
+ //the class was loaded and we can do something
  aConformingClass.doSomething()
 ```
 
