@@ -1,31 +1,24 @@
-//
-//  DynamicLoader.swift
-//  DynamicLoader
-//
-//  Created by Nicholas Cross on 3/07/2016.
-//  Copyright © 2016 Nicholas Cross. All rights reserved.
-//
 
 import Foundation
 
 public class DynamicClassLoader {
     
     public static func loadDynamic(classNamed:String, fromFrameworkNamed framework: String) -> DynamicLoadableClass.Type? {
-        guard let bundleURL = NSBundle.URLForResource(framework, withExtension: "framework", subdirectory: "Frameworks", inBundleWithURL: NSBundle.mainBundle().bundleURL), let bundle = NSBundle(URL: bundleURL) else {
+        guard let bundleURL = Bundle.url(forResource: framework, withExtension: "framework", subdirectory: "Frameworks", in: Bundle.main.bundleURL), let bundle = Bundle(url: bundleURL) else {
             return nil
         }
         
-        return loadDynamic(classNamed, fromBundle: bundle)
+        return loadDynamic(classNamed: classNamed, fromBundle: bundle)
     }
     
-    public static func loadDynamic(classNamed: String, fromBundle bundle: NSBundle) -> DynamicLoadableClass.Type? {
+    public static func loadDynamic(classNamed: String, fromBundle bundle: Bundle) -> DynamicLoadableClass.Type? {
         bundle.load()
         
         guard let aClass = NSClassFromString(classNamed) else {
             return nil
         }
         
-        return loadDynamicClass(aClass)
+        return loadDynamicClass(aClass: aClass)
     }
     
     private static func loadDynamicClass(aClass: AnyClass) -> DynamicLoadableClass.Type?  {

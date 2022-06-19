@@ -1,13 +1,12 @@
 //
 //  DynamicClassExample.swift
-//  DynamicLoader
+//  Plugin
 //
-//  Created by Nicholas Cross on 3/07/2016.
-//  Copyright © 2016 Nicholas Cross. All rights reserved.
+//  Created by Nicholas Cross on 19/6/2022.
 //
 
 import Foundation
-import DynamicLoader
+import Loader
 
 public class DynamicClassExample : DynamicLoadableClass {
     
