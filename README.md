@@ -1,4 +1,8 @@
+**_Important_: This documentation is out of date but the project itself has been updated to work with Swift 5 and Xcode14**
+
+
 # iOS Dynamic Embedded Framework Loading
+
 An example project showing embedded framework with conditional dynamic class loading based on scheme.
 
 ## DynamicLoader.framework
